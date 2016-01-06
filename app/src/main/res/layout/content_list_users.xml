@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aakash.chat.ListUsersActivity"
+    tools:showIn="@layout/activity_list_users">
+
+    <EditText
+        android:id="@+id/messageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/broadcastbtn"
+        android:autoText="true"
+        android:hint="type message" />
+
+    <Button
+        android:id="@+id/broadcastbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Broadcast"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/usersListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/broadcastbtn"
+        android:background="@color/off_white"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:padding="16dp" />
+
+
+
+</RelativeLayout>
